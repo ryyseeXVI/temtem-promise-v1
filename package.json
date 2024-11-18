@@ -1,5 +1,5 @@
 {
-    "name": "temtem-promise-v1",
+    "name": "@ryyseexvi/temtem-promise-v1",
     "version": "1.0.0",
     "description": "A package that return all of the Temtem API calls as methods in a class",
     "main": "./dist/index.js",
@@ -32,5 +32,12 @@
         "ts-node": "^10.9.2",
         "tsup": "^8.3.5",
         "typescript": "^5.6.3"
+    },
+    "files": [
+        "dist",
+        "README.md"
+    ],
+    "publishConfig": {
+        "access": "public"
     }
 }
