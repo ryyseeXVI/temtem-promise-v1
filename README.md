@@ -9,6 +9,7 @@ A modern TypeScript wrapper for the [Temtem API](https://temtem-api.mael.tech), 
 
 ```sh
 npm install temtem-promise-v1
+```
 
 🚀 Usage
 
@@ -30,6 +31,7 @@ const filteredTemtems = await api.getTemtems({
     expand: "evolution",
     weaknesses: true
 });
+```
 
 📚 Available Methods
 - getTemtems(params?: TemtemQueryParams)
