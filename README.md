@@ -64,6 +64,19 @@ All methods that accept parameters support filtering the response using:
 - limit: Limit the number of results
 Some endpoints support additional parameters like names, expand, and weaknesses.
 
+🏷️ Used Types/Interfaces
+- BasicQueryParams { fields?: string, limit?: number }
+- TemtemQueryParams extends BasicQueryParams { names?: string, expand?: string, weaknesses?: boolean }
+- TemtemByIdQueryParams { fields?: string, expand?: string, weaknesses?: boolean }
+- TechniquesQueryParams extends BasicQueryParams { names?: string }
+- TraitsQueryParams extends BasicQueryParams { names?: string }
+- TypesQueryParams = BasicQueryParams
+- ConditionsQueryParams = BasicQueryParams
+- TrainingCoursesQueryParams = BasicQueryParams
+- ItemsQueryParams = BasicQueryParams
+- GearQueryParams = BasicQueryParams
+- WeaknessCalculateParams { attacking: string, defending: string }
+
 📄 License
 MIT
 
