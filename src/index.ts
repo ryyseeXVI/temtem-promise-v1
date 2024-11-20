@@ -1,6 +1,8 @@
 import * as Types from './types';
 
-export class TemtemAPI {
+export * from './types';
+
+export class TemtemDex {
     private readonly baseUrl: string;
 
     constructor() {
@@ -210,3 +212,5 @@ export class TemtemAPI {
         return await response.json();
     }
 }
+
+export const TemtemApi = TemtemDex;
