@@ -16,7 +16,7 @@ npm install temtem-promise-v1
 ```ts
 import { TemtemAPI } from 'temtem-promise';
 
-const api = new TemtemAPI();
+const api = new TemtemDex();
 
 // Example: Get all Temtems
 const temtems = await api.getTemtems();
