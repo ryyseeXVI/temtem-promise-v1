@@ -82,3 +82,5 @@ MIT
 
 🤝 Contributing
 This wrapper uses the Temtem API provided by https://temtem-api.mael.tech
+
+# Using his typing package is strongly recommended until its included here.
