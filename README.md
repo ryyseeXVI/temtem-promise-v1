@@ -25,7 +25,7 @@ const temtem = await TemDex.getTemtemById(1);
 
 // Example: Get Temtems with specific parameters
 const filteredTemtems = await TemDex.getTemtems({
-    names: "Pigepic,Crystle",
+    names: "Pigepic",
     fields: "name,type",
     expand: "evolution",
     weaknesses: true
