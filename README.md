@@ -1,7 +1,6 @@
 # Temtem API Wrapper 🎮
 
-[![NPM Version](https://img.shields.io/npm/v/temtem-promise-v1)](https://www.npmjs.com/package/temtem-promise-v1)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![NPM Version](https://img.shields.io/npm/v/temtem-promise-v1)](https://www.npmjs.com/package/@ryyseexvi/temtem-promise-v1)
 
 A modern TypeScript wrapper for the [Temtem API](https://temtem-api.mael.tech), providing easy access to all Temtem game data.
 
@@ -14,18 +13,18 @@ npm install temtem-promise-v1
 🚀 Usage
 
 ```ts
-import { TemtemAPI } from 'temtem-promise';
+import { TemtemDex } from '@ryyseexvi/temtem-promise-v1';
 
-const api = new TemtemDex();
+const TemDex = new TemtemDex();
 
 // Example: Get all Temtems
-const temtems = await api.getTemtems();
+const temtems = await TemDex.getTemtems();
 
 // Example: Get a specific Temtem with ID
-const temtem = await api.getTemtemById(1);
+const temtem = await TemDex.getTemtemById(1);
 
 // Example: Get Temtems with specific parameters
-const filteredTemtems = await api.getTemtems({
+const filteredTemtems = await TemDex.getTemtems({
     names: "Pigepic,Crystle",
     fields: "name,type",
     expand: "evolution",
