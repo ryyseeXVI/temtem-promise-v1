@@ -9,6 +9,15 @@ export class TemtemDex {
         this.baseUrl = 'https://temtem-api.mael.tech/api';
     }
 
+    private async fetchAndParse(endpoint: string, queryParams?: URLSearchParams) {
+        const url = `${this.baseUrl}/${endpoint}${queryParams?.toString() ? '?' + queryParams.toString() : ''}`;
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return await response.json();
+    }
+
     async getTemtems(params?: Types.TemtemQueryParams) {
         const queryParams = new URLSearchParams();
         
@@ -17,9 +26,7 @@ export class TemtemDex {
         if (params?.expand) queryParams.append('expand', params.expand);
         if (params?.weaknesses) queryParams.append('weaknesses', params.weaknesses.toString());
 
-        const url = `${this.baseUrl}/temtems${queryParams.toString() ? '?' + queryParams.toString() : ''}`;
-        const response = await fetch(url);
-        return await response.json();
+        return this.fetchAndParse('temtems', queryParams);
     }
 
     async getTemtemById(id: number, params?: Types.TemtemByIdQueryParams) {

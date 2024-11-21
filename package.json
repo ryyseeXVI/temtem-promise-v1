@@ -31,6 +31,7 @@
   },
   "homepage": "https://github.com/ryyseeXVI/temtem-promise-v1#readme",
   "devDependencies": {
+    "@types/jest": "^29.5.14",
     "husky": "^9.1.7",
     "ts-node": "^10.9.2",
     "tsup": "^8.3.5",
@@ -42,5 +43,9 @@
   ],
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@types/node-fetch": "^2.6.12",
+    "node-fetch": "^3.3.2"
   }
 }
